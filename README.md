@@ -1,4 +1,3 @@
-cat > README.md << 'EOF'
 # 🏦 Axizulo African Bank - Full Stack Banking Application
 
 A complete full-stack banking application built with Python Flask backend and modern frontend technologies. Demonstrates professional software development practices with Object-Oriented Programming principles.
@@ -47,7 +46,7 @@ A complete full-stack banking application built with Python Flask backend and mo
 
 ## 📁 Project Structure
 
-\`\`\`
+```
 banking-app/
 ├── src/                    # Core business logic
 │   ├── bank.py            # Main banking system
@@ -62,7 +61,7 @@ banking-app/
 ├── app.py                # Flask web application
 ├── main.py               # Command-line interface
 └── requirements.txt      # Python dependencies
-\`\`\`
+```
 
 ## 🏃‍♂️ Quick Start
 
@@ -73,51 +72,75 @@ banking-app/
 ### Installation
 
 1. **Clone the repository**
-   \`\`\`bash
-   git clone https://github.com/thabangmotsoahae/banking-app.git
+   ```bash
+   git clone https://github.com/Axulo-Inc/banking-app.git
    cd banking-app
-   \`\`\`
+   ```
 
 2. **Install dependencies**
-   \`\`\`bash
+   ```bash
    pip install -r requirements.txt
-   \`\`\`
+   ```
 
 3. **Run the web application**
-   \`\`\`bash
+   ```bash
    python app.py
-   \`\`\`
+   ```
 
 4. **Access the application**
-   Open your browser and navigate to \`http://localhost:5000\`
+   Open your browser and navigate to `http://localhost:5000`
 
 ### Alternative: Command Line Version
-\`\`\`bash
+```bash
 python main.py
-\`\`\`
+```
 
 ## 🧪 Testing
 
 Run the test suite to verify all functionality:
-\`\`\`bash
+```bash
 python -m unittest tests/test_bank.py
-\`\`\`
+```
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the web application**
+   ```bash
+   python app.py
+   ```
+
+4. **Access the application**
+   Open your browser and navigate to `http://localhost:5000`
+
+### Alternative: Command Line Version
+```bash
+python main.py
+```
+
+## 🧪 Testing
+
+Run the test suite to verify all functionality:
+```bash
+python -m unittest tests/test_bank.py
+```
 
 ## 💡 OOP Concepts Demonstrated
 
 ### 1. Classes & Objects
-\`\`\`python
+```python
 class Account:
 class SavingsAccount(Account):
 class CurrentAccount(Account):
-\`\`\`
+```
 
 ### 2. Inheritance
-- \`SavingsAccount\` and \`CurrentAccount\` inherit from base \`Account\` class
+- `SavingsAccount` and `CurrentAccount` inherit from base `Account` class
 - Method overriding for specialized behavior
 
 ### 3. Encapsulation
-- Private attributes with \`_prefix\`
+- Private attributes with `_prefix`
 - Property decorators for controlled access
 - Data validation in setter methods
 
@@ -125,28 +148,28 @@ class CurrentAccount(Account):
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | \`/\` | Homepage |
-| GET/POST | \`/create_account\` | Account creation |
-| GET | \`/dashboard\` | User dashboard |
-| POST | \`/deposit\` | Deposit funds |
-| POST | \`/withdraw\` | Withdraw funds |
-| POST | \`/transfer\` | Transfer between accounts |
-| GET | \`/balance\` | Check balance |
-| GET | \`/transaction_history\` | Get transaction history |
+| GET | `/` | Homepage |
+| GET/POST | `/create_account` | Account creation |
+| GET | `/dashboard` | User dashboard |
+| POST | `/deposit` | Deposit funds |
+| POST | `/withdraw` | Withdraw funds |
+| POST | `/transfer` | Transfer between accounts |
+| GET | `/balance` | Check balance |
+| GET | `/transaction_history` | Get transaction history |
 
 ## 🎯 Key Features Code Examples
 
 ### Account Creation
-\`\`\`python
+```python
 # Create savings account with interest
 account = bank.create_account("John Doe", "savings", 1000.0, interest_rate=2.5)
 
 # Create current account with overdraft
 account = bank.create_account("Jane Smith", "current", 500.0, overdraft_limit=1000.0)
-\`\`\`
+```
 
 ### Transaction Processing
-\`\`\`python
+```python
 # Deposit with description
 account.deposit(500.0, "Salary deposit")
 
@@ -155,25 +178,25 @@ account.withdraw(200.0, "ATM withdrawal")
 
 # Transfer between accounts
 bank.transfer_funds("ACC123", "ACC456", 300.0)
-\`\`\`
+```
 
 ## 🔧 Customization
 
 ### Adding New Account Types
-Extend the \`Account\` class:
-\`\`\`python
+Extend the `Account` class:
+```python
 class BusinessAccount(Account):
     def __init__(self, account_holder, initial_deposit, business_type):
         super().__init__(account_holder, initial_deposit)
         self._business_type = business_type
-\`\`\`
+```
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch (\`git checkout -b feature/AmazingFeature\`)
-3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`)
-4. Push to the branch (\`git push origin feature/AmazingFeature\`)
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m "Add some AmazingFeature"`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
 ## 👨‍💻 Author
@@ -187,4 +210,3 @@ class BusinessAccount(Account):
 - Flask documentation and community
 - Python software foundation
 - Banking concept inspired by real-world financial systems
-EOF
