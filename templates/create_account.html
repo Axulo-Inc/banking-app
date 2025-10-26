@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Axizulo African Bank</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .btn {
+            background: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        .btn:hover {
+            background: #2980b9;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 10px;
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Create New Account</h1>
+            <p>Join Axizulo African Bank today</p>
+        </div>
+        
+        <form method="POST">
+            <div class="form-group">
+                <label for="account_holder">Full Name:</label>
+                <input type="text" id="account_holder" name="account_holder" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="account_type">Account Type:</label>
+                <select id="account_type" name="account_type" required>
+                    <option value="savings">Savings Account (2.5% interest)</option>
+                    <option value="current">Current Account (R1000 overdraft)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="initial_deposit">Initial Deposit (R):</label>
+                <input type="number" id="initial_deposit" name="initial_deposit" value="0" min="0" step="0.01" required>
+            </div>
+            
+            <button type="submit" class="btn">Create Account</button>
+        </form>
+        
+        <a href="/" class="back-btn">← Back to Home</a>
+    </div>
+</body>
+</html>
